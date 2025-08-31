@@ -84,6 +84,7 @@ public final class ConcurrentCache<K,V> {
      */
     public void clear() {
         this.cache.clear();
+        this.keysQueue.clear();
     }
     
     

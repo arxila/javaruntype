@@ -5,6 +5,7 @@ Change Log
 -----
 
   * Added support for Java records.
+  * Fixed type cache not properly clearing the key queue.
   * Code cleanup.
 
 
