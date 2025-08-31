@@ -1,4 +1,4 @@
-// $ANTLR 3.5.3 io/arxila/javaruntype/type/parser/Type.g 2025-08-31 03:20:30
+// $ANTLR 3.5.3 io/arxila/javaruntype/type/parser/Type.g 2025-08-31 16:17:33
 
 /*
  * =========================================================================

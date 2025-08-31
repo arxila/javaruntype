@@ -1,4 +1,4 @@
-// $ANTLR 3.5.3 io/arxila/javaruntype/type/parser/Type.g 2025-08-31 03:20:30
+// $ANTLR 3.5.3 io/arxila/javaruntype/type/parser/Type.g 2025-08-31 16:17:33
 
 /*
  * =========================================================================
@@ -247,16 +247,16 @@ public class TypeLexer extends Lexer {
 		try {
 			int _type = CLASSNAME;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// io/arxila/javaruntype/type/parser/Type.g:120:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | '$' )+ )
-			// io/arxila/javaruntype/type/parser/Type.g:120:7: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | '$' )+
+			// io/arxila/javaruntype/type/parser/Type.g:120:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '.' | '$' )+ )
+			// io/arxila/javaruntype/type/parser/Type.g:120:7: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '.' | '$' )+
 			{
-			// io/arxila/javaruntype/type/parser/Type.g:120:7: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '-' | '_' | '.' | '$' )+
+			// io/arxila/javaruntype/type/parser/Type.g:120:7: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '.' | '$' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
 				int alt1=2;
 				int LA1_0 = input.LA(1);
-				if ( (LA1_0=='$'||(LA1_0 >= '-' && LA1_0 <= '.')||(LA1_0 >= '0' && LA1_0 <= '9')||(LA1_0 >= 'A' && LA1_0 <= 'Z')||LA1_0=='_'||(LA1_0 >= 'a' && LA1_0 <= 'z')) ) {
+				if ( (LA1_0=='$'||LA1_0=='.'||(LA1_0 >= '0' && LA1_0 <= '9')||(LA1_0 >= 'A' && LA1_0 <= 'Z')||LA1_0=='_'||(LA1_0 >= 'a' && LA1_0 <= 'z')) ) {
 					alt1=1;
 				}
 
@@ -264,7 +264,7 @@ public class TypeLexer extends Lexer {
 				case 1 :
 					// io/arxila/javaruntype/type/parser/Type.g:
 					{
-					if ( input.LA(1)=='$'||(input.LA(1) >= '-' && input.LA(1) <= '.')||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( input.LA(1)=='$'||input.LA(1)=='.'||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
 					}
 					else {
@@ -372,7 +372,7 @@ public class TypeLexer extends Lexer {
 				int LA3_10 = input.LA(3);
 				if ( (LA3_10=='T') ) {
 					int LA3_15 = input.LA(4);
-					if ( (LA3_15=='$'||(LA3_15 >= '-' && LA3_15 <= '.')||(LA3_15 >= '0' && LA3_15 <= '9')||(LA3_15 >= 'A' && LA3_15 <= 'Z')||LA3_15=='_'||(LA3_15 >= 'a' && LA3_15 <= 'z')) ) {
+					if ( (LA3_15=='$'||LA3_15=='.'||(LA3_15 >= '0' && LA3_15 <= '9')||(LA3_15 >= 'A' && LA3_15 <= 'Z')||LA3_15=='_'||(LA3_15 >= 'a' && LA3_15 <= 'z')) ) {
 						alt3=10;
 					}
 
@@ -419,7 +419,7 @@ public class TypeLexer extends Lexer {
 				int LA3_14 = input.LA(3);
 				if ( (LA3_14=='P') ) {
 					int LA3_16 = input.LA(4);
-					if ( (LA3_16=='$'||(LA3_16 >= '-' && LA3_16 <= '.')||(LA3_16 >= '0' && LA3_16 <= '9')||(LA3_16 >= 'A' && LA3_16 <= 'Z')||LA3_16=='_'||(LA3_16 >= 'a' && LA3_16 <= 'z')) ) {
+					if ( (LA3_16=='$'||LA3_16=='.'||(LA3_16 >= '0' && LA3_16 <= '9')||(LA3_16 >= 'A' && LA3_16 <= 'Z')||LA3_16=='_'||(LA3_16 >= 'a' && LA3_16 <= 'z')) ) {
 						alt3=10;
 					}
 
@@ -447,7 +447,6 @@ public class TypeLexer extends Lexer {
 			}
 			break;
 		case '$':
-		case '-':
 		case '.':
 		case '0':
 		case '1':
