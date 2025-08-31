@@ -116,6 +116,7 @@ typeParameterization
     ;
 
 
+// The "class name" here may include package names, hence the support for '.' characters.
 CLASSNAME
     : ('a'..'z' | 'A'..'Z' | '0'..'9' | '_' | '.' | '$')+
     ;
