@@ -179,6 +179,19 @@ public final class Type<T> implements Serializable {
     public boolean isInterface() {
         return !isArray() && this.componentClass.isInterface();
     }
+
+
+    /**
+     * Determines whether the type is a record or not. A type is considered a record
+     * if it is not an array and its component class is a record type.
+     *
+     * @return true if the type is a record; false otherwise.
+     *
+     * @since 2.0.0
+     */
+    public boolean isRecord() {
+        return !isArray() && this.componentClass.isRecord();
+    }
     
     
     /**
