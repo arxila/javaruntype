@@ -24,9 +24,9 @@ package io.arxila.javaruntype.type;
  * Represents a type parameter which contains a "super" clause.
  * </p>
  * <p>
- * For example, the type <tt>List&lt;? super Set&lt;String[]&gt;&gt;</tt>,
- * would have an <tt>SuperTypeParameter</tt>
- * containing the <tt>? super Set&lt;String[]&gt;</tt> parameter.
+ * For example, the type <kbd>List&lt;? super Set&lt;String[]&gt;&gt;</kbd>,
+ * would have an <kbd>SuperTypeParameter</kbd>
+ * containing the <kbd>? super Set&lt;String[]&gt;</kbd> parameter.
  * </p>
  * 
  * @since 1.0

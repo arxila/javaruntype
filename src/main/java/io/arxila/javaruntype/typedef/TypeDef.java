@@ -34,30 +34,30 @@ import io.arxila.javaruntype.util.Utils;
  * Examples of type definitions are:
  * </p>
  * <ul>
- *   <li><tt>app.pack.ClassOne</tt></li>
- *   <li><tt>app.pack.ClassTwo&lt;E&gt;</tt></li>
- *   <li><tt>app.pack.ClassThree&lt;E, T&gt;</tt></li>
- *   <li><tt>app.pack.ClassFour&lt;E, T extends E&gt;</tt></li>
- *   <li><tt>app.pack.ClassFive&lt;E, T extends java.io.Serializable&gt;</tt></li>
- *   <li><tt>app.pack.ClassSix&lt;E, T extends E &amp; java.io.Serializable&gt;</tt></li>
- *   <li><tt>app.pack.ClassSeven&lt;E, T, X extends E &amp; java.util.Collection&lt;T&gt;&gt;</tt></li>
- *   <li><tt>app.pack.ClassEight&lt;E, T, X extends E &amp; java.util.Collection&lt;? extends T&gt;&gt;</tt></li>
+ *   <li><kbd>app.pack.ClassOne</kbd></li>
+ *   <li><kbd>app.pack.ClassTwo&lt;E&gt;</kbd></li>
+ *   <li><kbd>app.pack.ClassThree&lt;E, T&gt;</kbd></li>
+ *   <li><kbd>app.pack.ClassFour&lt;E, T extends E&gt;</kbd></li>
+ *   <li><kbd>app.pack.ClassFive&lt;E, T extends java.io.Serializable&gt;</kbd></li>
+ *   <li><kbd>app.pack.ClassSix&lt;E, T extends E &amp; java.io.Serializable&gt;</kbd></li>
+ *   <li><kbd>app.pack.ClassSeven&lt;E, T, X extends E &amp; java.util.Collection&lt;T&gt;&gt;</kbd></li>
+ *   <li><kbd>app.pack.ClassEight&lt;E, T, X extends E &amp; java.util.Collection&lt;? extends T&gt;&gt;</kbd></li>
  *   <li>etc...</li>
  * </ul>
  * <p>
  * These type definitions serve as a template for creating <b>types</b> ({@link io.arxila.javaruntype.type.Type}
- * class), which resolve all type variables present in the type definition (for example, for a <tt>TypeDef</tt>
- * object <tt>java.util.Collection&lt;E&gt;</tt> we can get a <tt>Type</tt> object
- * <tt>java.util.Collection&lt;java.lang.String&gt;</tt>
+ * class), which resolve all type variables present in the type definition (for example, for a <kbd>TypeDef</kbd>
+ * object <kbd>java.util.Collection&lt;E&gt;</kbd> we can get a <kbd>Type</kbd> object
+ * <kbd>java.util.Collection&lt;java.lang.String&gt;</kbd>
  * </p>
  * <p>
- * Objects of this class are never created directly. To obtain a <tt>TypeDef</tt> object,
+ * Objects of this class are never created directly. To obtain a <kbd>TypeDef</kbd> object,
  * the diverse methods in the {@link TypeDefs} class should be used.
  * </p>
  * <p>
  * Objects of this class are <b>immutable</b>, and thus <b>thread-safe</b>. Also, in order
  * to avoid excessive memory usage, an internal synchronized cache exists which 
- * prevents the same <tt>TypeDef</tt> from being instantiated more than once (so, if two 
+ * prevents the same <kbd>TypeDef</kbd> from being instantiated more than once (so, if two 
  * TypeDef objects are equal, this will mean that they are the same object).
  * </p>
  * 
@@ -113,8 +113,8 @@ public final class TypeDef implements Serializable {
     /**
      * 
      * Returns the component class of the type definition. For example, if the type definition
-     * is <tt>java.util.Collection&lt;E&gt;</tt>, this method will return
-     * <tt>java.lang.Class&lt;java.util.Collection&gt;</tt>
+     * is <kbd>java.util.Collection&lt;E&gt;</kbd>, this method will return
+     * <kbd>java.lang.Class&lt;java.util.Collection&gt;</kbd>
      * 
      * @return the component class.
      */

@@ -23,17 +23,17 @@ import java.io.Serializable;
 
 /**
  * <p>
- * Specifies an inner type definition variable which can be both a bound for a <tt>BoundTypeDefVariable</tt> or
- * a type variable for another <tt>InnerTypeDefVariable</tt>.
+ * Specifies an inner type definition variable which can be both a bound for a <kbd>BoundTypeDefVariable</kbd> or
+ * a type variable for another <kbd>InnerTypeDefVariable</kbd>.
  * </p>
  * <p>
  * Inner type definition variables can take several shapes:
  * </p>
  * <ul>
- *   <li><tt>X extends <b>String</b></tt>: {@link InnerClassTypeDefVariable}</li>
- *   <li><tt>X extends <b>T</b></tt>: {@link InnerNamedTypeDefVariable}</li>
- *   <li><tt>X extends <b>List&lt;Integer&gt;</b></tt>: {@link InnerParameterizedTypeTypeDefVariable}</li>
- *   <li><tt>X extends List&lt;<b>? extends Integer</b>&gt;</tt>: {@link InnerWildcardTypeDefVariable}</li>
+ *   <li><kbd>X extends <b>String</b></kbd>: {@link InnerClassTypeDefVariable}</li>
+ *   <li><kbd>X extends <b>T</b></kbd>: {@link InnerNamedTypeDefVariable}</li>
+ *   <li><kbd>X extends <b>List&lt;Integer&gt;</b></kbd>: {@link InnerParameterizedTypeTypeDefVariable}</li>
+ *   <li><kbd>X extends List&lt;<b>? extends Integer</b>&gt;</kbd>: {@link InnerWildcardTypeDefVariable}</li>
  * </ul>
  * 
  * @since 1.0

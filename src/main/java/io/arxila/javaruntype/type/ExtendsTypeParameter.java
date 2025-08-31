@@ -24,9 +24,9 @@ package io.arxila.javaruntype.type;
  * Represents a type parameter which contains an "extends" clause.
  * </p>
  * <p>
- * For example, the type <tt>List&lt;? extends Set&lt;String[]&gt;&gt;</tt>,
- * would have an <tt>ExtendsTypeParameter</tt>
- * containing the <tt>? extends Set&lt;String[]&gt;</tt> parameter.
+ * For example, the type <kbd>List&lt;? extends Set&lt;String[]&gt;&gt;</kbd>,
+ * would have an <kbd>ExtendsTypeParameter</kbd>
+ * containing the <kbd>? extends Set&lt;String[]&gt;</kbd> parameter.
  * </p>
  * 
  * @since 1.0

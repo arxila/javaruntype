@@ -27,7 +27,7 @@ import io.arxila.javaruntype.util.Utils;
 
 /**
  * <p>
- * Base synchronized cache for <tt>*Registry</tt> objects.
+ * Base synchronized cache for <kbd>*Registry</kbd> objects.
  * </p>
  * <p>
  * <b>Do not</b> use this class directly.

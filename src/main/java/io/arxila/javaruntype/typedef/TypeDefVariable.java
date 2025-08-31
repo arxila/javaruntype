@@ -28,33 +28,33 @@ import java.io.Serializable;
  * of them represented by one of this interface's implementing classes):
  * </p>
  * <ul>
- *   <li>Named (<tt>NamedTypeDefVariable</tt>): <tt>E</tt></li>
- *   <li>Bounded (<tt>BoundedTypeDefVariable</tt>): <tt>E extends T</tt></li>
+ *   <li>Named (<kbd>NamedTypeDefVariable</kbd>): <kbd>E</kbd></li>
+ *   <li>Bounded (<kbd>BoundedTypeDefVariable</kbd>): <kbd>E extends T</kbd></li>
  * </ul>
  * <p>
  * Some examples:
  * </p>
  * <ul>
- *   <li><tt>app.pack.ClassOne</tt> contains no <tt>TypeDefVariable</tt>s.</li>
- *   <li><tt>app.pack.ClassThree&lt;E, T&gt;</tt> contains two <tt>TypeDefVariable</tt>s:
+ *   <li><kbd>app.pack.ClassOne</kbd> contains no <kbd>TypeDefVariable</kbd>s.</li>
+ *   <li><kbd>app.pack.ClassThree&lt;E, T&gt;</kbd> contains two <kbd>TypeDefVariable</kbd>s:
  *       <ul>
- *         <li><tt>E</tt> (named)</li>
- *         <li><tt>T</tt> (named)</li>
+ *         <li><kbd>E</kbd> (named)</li>
+ *         <li><kbd>T</kbd> (named)</li>
  *       </ul> 
  *   </li>
- *   <li><tt>app.pack.ClassEight&lt;E, T, X extends E &amp; java.util.Collection&lt;? extends T&gt;&gt;</tt> contains three <tt>TypeDefVariable</tt>s:
+ *   <li><kbd>app.pack.ClassEight&lt;E, T, X extends E &amp; java.util.Collection&lt;? extends T&gt;&gt;</kbd> contains three <kbd>TypeDefVariable</kbd>s:
  *       <ul>
- *         <li><tt>E</tt> (named)</li>
- *         <li><tt>T</tt> (named)</li>
- *         <li><tt>X extends E &amp; java.util.Collection&lt;? extends T&gt;</tt> (bounded)</li>
+ *         <li><kbd>E</kbd> (named)</li>
+ *         <li><kbd>T</kbd> (named)</li>
+ *         <li><kbd>X extends E &amp; java.util.Collection&lt;? extends T&gt;</kbd> (bounded)</li>
  *       </ul> 
  *   </li>
  * </ul>
  * 
  * <p>
- * As can be seen above, <i>every</i> type definition variable has, at least, a <b>name</b>: <tt>E</tt> ,<tt>T</tt> and <tt>X</tt>
+ * As can be seen above, <i>every</i> type definition variable has, at least, a <b>name</b>: <kbd>E</kbd> ,<kbd>T</kbd> and <kbd>X</kbd>
  * in the above examples. Also, it can be noted that bounded variables can create relations among variables, like in 
- * <tt>X extends E</tt>.
+ * <kbd>X extends E</kbd>.
  * </p>
  * 
  * @since 1.0

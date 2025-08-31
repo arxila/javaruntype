@@ -27,7 +27,7 @@ import io.arxila.javaruntype.util.Utils;
  * Represents an inner type definition variable containing a wildcard or bounded wildcard type.
  * </p>
  * <p>
- * For example: <tt>X extends List&lt;<b>? extends Integer</b>&gt;</tt>.
+ * For example: <kbd>X extends List&lt;<b>? extends Integer</b>&gt;</kbd>.
  * </p>
  * 
  * @since 1.0
@@ -77,7 +77,7 @@ public final class InnerWildcardTypeDefVariable implements InnerTypeDefVariable 
 
     /**
      * <p>
-     * Returns whether the variable establishes an upper bound (with an <tt>extends</tt> clause).
+     * Returns whether the variable establishes an upper bound (with an <kbd>extends</kbd> clause).
      * </p>
      * 
      * @return whether the variable establishes an upper bound
@@ -89,7 +89,7 @@ public final class InnerWildcardTypeDefVariable implements InnerTypeDefVariable 
     
     /**
      * <p>
-     * Returns the variable upper bound (defined with an <tt>extends</tt> clause), if any.
+     * Returns the variable upper bound (defined with an <kbd>extends</kbd> clause), if any.
      * </p>
      * 
      * @return the upper bound
@@ -101,7 +101,7 @@ public final class InnerWildcardTypeDefVariable implements InnerTypeDefVariable 
     
     /**
      * <p>
-     * Returns whether the variable establishes a lower bound (with a <tt>super</tt> clause).
+     * Returns whether the variable establishes a lower bound (with a <kbd>super</kbd> clause).
      * </p>
      * 
      * @return whether the variable establishes a lower bound
@@ -113,7 +113,7 @@ public final class InnerWildcardTypeDefVariable implements InnerTypeDefVariable 
     
     /**
      * <p>
-     * Returns the variable upper bound (defined with an <tt>extends</tt> clause), if any.
+     * Returns the variable upper bound (defined with an <kbd>extends</kbd> clause), if any.
      * </p>
      * 
      * @return the upper bound

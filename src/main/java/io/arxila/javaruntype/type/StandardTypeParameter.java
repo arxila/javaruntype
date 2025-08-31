@@ -21,12 +21,12 @@ package io.arxila.javaruntype.type;
 
 /**
  * <p>
- * This class represents a type parameter which only contains a <tt>Type</tt>.
+ * This class represents a type parameter which only contains a <kbd>Type</kbd>.
  * </p>
  * <p>
- * For example, the type <tt>List&lt;Set&lt;String[]&gt;&gt;</tt>;
- * would have a <tt>StandardTypeParameter</tt>
- * containing the <tt>Set&lt;String[]&gt;</tt> parameter.
+ * For example, the type <kbd>List&lt;Set&lt;String[]&gt;&gt;</kbd>;
+ * would have a <kbd>StandardTypeParameter</kbd>
+ * containing the <kbd>Set&lt;String[]&gt;</kbd> parameter.
  * </p>
  * 
  * 

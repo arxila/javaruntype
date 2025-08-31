@@ -24,7 +24,7 @@ package io.arxila.javaruntype.typedef;
  * Represents an inner type definition variable containing a variable name.
  * </p>
  * <p>
- * For example: <tt>X extends <b>T</b></tt>.
+ * For example: <kbd>X extends <b>T</b></kbd>.
  * </p>
  * 
  * @since 1.0
