@@ -1,28 +1,28 @@
 /*
- * =============================================================================
- * 
- *   Copyright (c) 2009, The JAVARUNTYPE team (http://www.javaruntype.org)
- * 
+ * =========================================================================
+ *
+ *   Copyright (c) 2009-2025 Arxila OSS (https://arxila.io)
+ *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the License at
- * 
+ *
  *       http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  *   Unless required by applicable law or agreed to in writing, software
  *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- * 
- * =============================================================================
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ *   implied. See the License for the specific language governing
+ *   permissions and limitations under the License.
+ *
+ * =========================================================================
  */
 package io.arxila.javaruntype.typedef;
 
 import java.io.ObjectStreamException;
 import java.io.Serializable;
 
-import org.javaruntype.util.Utils;
+import io.arxila.javaruntype.util.Utils;
 
 /**
  * <p>
@@ -45,8 +45,8 @@ import org.javaruntype.util.Utils;
  *   <li>etc...</li>
  * </ul>
  * <p>
- * These type definitions serve as a template for creating <b>types</b> ({@link org.javaruntype.type.Type} class), which
- * resolve all type variables present in the type definition (for example, for a <tt>TypeDef</tt>
+ * These type definitions serve as a template for creating <b>types</b> ({@link io.arxila.javaruntype.type.Type}
+ * class), which resolve all type variables present in the type definition (for example, for a <tt>TypeDef</tt>
  * object <tt>java.util.Collection&lt;E&gt;</tt> we can get a <tt>Type</tt> object
  * <tt>java.util.Collection&lt;java.lang.String&gt;</tt>
  * </p>

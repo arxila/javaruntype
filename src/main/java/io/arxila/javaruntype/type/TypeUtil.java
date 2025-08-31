@@ -1,21 +1,21 @@
 /*
- * =============================================================================
- * 
- *   Copyright (c) 2009, The JAVARUNTYPE team (http://www.javaruntype.org)
- * 
+ * =========================================================================
+ *
+ *   Copyright (c) 2009-2025 Arxila OSS (https://arxila.io)
+ *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the License at
- * 
+ *
  *       http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  *   Unless required by applicable law or agreed to in writing, software
  *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- * 
- * =============================================================================
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ *   implied. See the License for the specific language governing
+ *   permissions and limitations under the License.
+ *
+ * =========================================================================
  */
 package io.arxila.javaruntype.type;
 
@@ -37,21 +37,21 @@ import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.CommonTree;
 import org.antlr.runtime.tree.Tree;
-import org.javaruntype.exceptions.TypeRecognitionException;
-import org.javaruntype.exceptions.TypeValidationException;
-import org.javaruntype.type.parser.TypeLexer;
-import org.javaruntype.type.parser.TypeParser;
-import org.javaruntype.typedef.BoundedTypeDefVariable;
-import org.javaruntype.typedef.InnerClassTypeDefVariable;
-import org.javaruntype.typedef.InnerNamedTypeDefVariable;
-import org.javaruntype.typedef.InnerParameterizedTypeTypeDefVariable;
-import org.javaruntype.typedef.InnerTypeDefVariable;
-import org.javaruntype.typedef.InnerWildcardTypeDefVariable;
-import org.javaruntype.typedef.NamedTypeDefVariable;
-import org.javaruntype.typedef.TypeDef;
-import org.javaruntype.typedef.TypeDefVariable;
-import org.javaruntype.typedef.TypeDefs;
-import org.javaruntype.util.Utils;
+import io.arxila.javaruntype.exceptions.TypeRecognitionException;
+import io.arxila.javaruntype.exceptions.TypeValidationException;
+import io.arxila.javaruntype.type.parser.TypeLexer;
+import io.arxila.javaruntype.type.parser.TypeParser;
+import io.arxila.javaruntype.typedef.BoundedTypeDefVariable;
+import io.arxila.javaruntype.typedef.InnerClassTypeDefVariable;
+import io.arxila.javaruntype.typedef.InnerNamedTypeDefVariable;
+import io.arxila.javaruntype.typedef.InnerParameterizedTypeTypeDefVariable;
+import io.arxila.javaruntype.typedef.InnerTypeDefVariable;
+import io.arxila.javaruntype.typedef.InnerWildcardTypeDefVariable;
+import io.arxila.javaruntype.typedef.NamedTypeDefVariable;
+import io.arxila.javaruntype.typedef.TypeDef;
+import io.arxila.javaruntype.typedef.TypeDefVariable;
+import io.arxila.javaruntype.typedef.TypeDefs;
+import io.arxila.javaruntype.util.Utils;
 
 /*
  * (non-javadoc)

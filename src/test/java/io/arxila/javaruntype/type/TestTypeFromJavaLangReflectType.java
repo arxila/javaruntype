@@ -1,16 +1,18 @@
 package io.arxila.javaruntype.type;
 
+import io.arxila.javaruntype.exceptions.TypeValidationException;
 import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.junit.jupiter.api.Test;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.javaruntype.exceptions.TypeValidationException;
 
-public class TestTypeFromJavaLangReflectType extends TestCase {
+public class TestTypeFromJavaLangReflectType {
 
     
     public String m1() {
@@ -51,7 +53,7 @@ public class TestTypeFromJavaLangReflectType extends TestCase {
 
     
     
-    @SuppressWarnings("unused")
+    @Test
     public void testForJavaLangReflectType() throws Exception {
         
         final Method m1 = TestTypeFromJavaLangReflectType.class.getMethod("m1");

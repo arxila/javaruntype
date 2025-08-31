@@ -1,21 +1,21 @@
 /*
- * =============================================================================
- * 
- *   Copyright (c) 2009, The JAVARUNTYPE team (http://www.javaruntype.org)
- * 
+ * =========================================================================
+ *
+ *   Copyright (c) 2009-2025 Arxila OSS (https://arxila.io)
+ *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the License at
- * 
+ *
  *       http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  *   Unless required by applicable law or agreed to in writing, software
  *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- * 
- * =============================================================================
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ *   implied. See the License for the specific language governing
+ *   permissions and limitations under the License.
+ *
+ * =========================================================================
  */
 package io.arxila.javaruntype.type;
 
@@ -23,7 +23,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 
-import org.javaruntype.cache.ConcurrentCache;
+import io.arxila.javaruntype.cache.ConcurrentCache;
 
 
 /*
@@ -173,7 +173,7 @@ final class TypeRegistry {
         /*
          * When variable substitutions are specified, including these in the map keys
          * would not be of great help as the amount of equality operations to be performed
-         * would be quite high and creating the org.javaruntype.type.Type from the
+         * would be quite high and creating the io.arxila.javaruntype.type.Type from the
          * java.lang.reflect.Type is not a too expensive operation.
          */
         return TypeUtil.createFromJavaLangReflectType(

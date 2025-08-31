@@ -1,13 +1,12 @@
 package io.arxila.javaruntype.type.testtypes;
 
+import io.arxila.javaruntype.type.Type;
+import io.arxila.javaruntype.type.Types;
 import java.util.HashMap;
 import java.util.Map;
+import org.junit.jupiter.api.Test;
 
-import org.javaruntype.type.Type;
-import org.javaruntype.type.Types;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestTypeFromJavaLangReflectWithSelfBoundedTypeVariables {
     public interface X<T extends Comparable<T>> {
