@@ -29,7 +29,7 @@
   <parent>
     <groupId>io.arxila</groupId>
     <artifactId>arxila-parent</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
   </parent>
 
   <groupId>io.arxila.javaruntype</groupId>
@@ -139,6 +139,34 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
+        <!--  ************************************************************* -->
+        <!--  UNCOMMENT ONLY FOR GENERATING AND/OR REGENERATING THE PARSER  -->
+        <!--  ************************************************************* -->
+        <!--
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <configuration>
+              <target>
+                <java classname="org.antlr.Tool" classpathref="maven.plugin.classpath" fork="true" dir="src/main/java">
+                  <arg value="io/arxila/javaruntype/type/parser/Type.g" />
+                </java>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr</artifactId>
+            <version>${antlr.version}</version>
+            <scope>compile</scope>
+          </dependency>
+        </dependencies>
+        -->
       </plugin>
 
       <plugin>
@@ -157,11 +185,9 @@
 
   <dependencies>
 
-    <!-- TODO -->
     <dependency>
       <groupId>org.antlr</groupId>
       <artifactId>antlr-runtime</artifactId>
-      <version>3.1.2</version>
       <scope>compile</scope>
       <exclusions>
         <exclusion>
