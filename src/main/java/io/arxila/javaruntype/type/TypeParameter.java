@@ -36,8 +36,6 @@ import java.io.Serializable;
  * </ul>
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public abstract class TypeParameter<T> implements Serializable {

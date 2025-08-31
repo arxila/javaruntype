@@ -26,8 +26,6 @@ package io.arxila.javaruntype.typedef;
  * 
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public final class NamedTypeDefVariable implements TypeDefVariable {

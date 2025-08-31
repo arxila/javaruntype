@@ -23,14 +23,11 @@ package io.arxila.javaruntype.type;
 
 
 /*
- * (non-javadoc)
- * 
+ *
  * This class acts as a container for TypeRegistry, so that it allows
  * assignability between types to be cached.
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 final class TypeAssignation {

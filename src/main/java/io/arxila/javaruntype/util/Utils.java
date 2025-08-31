@@ -30,8 +30,6 @@ import java.util.Map;
  * </p>
  * 
  * @since 1.1
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public class Utils {

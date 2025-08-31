@@ -30,8 +30,6 @@ package io.arxila.javaruntype.type;
  * </p>
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public final class ExtendsTypeParameter<T> extends TypeParameter<T> {

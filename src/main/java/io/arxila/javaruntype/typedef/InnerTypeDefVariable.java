@@ -37,8 +37,6 @@ import java.io.Serializable;
  * </ul>
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public interface InnerTypeDefVariable extends Serializable {

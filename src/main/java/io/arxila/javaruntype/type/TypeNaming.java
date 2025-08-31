@@ -20,13 +20,10 @@
 package io.arxila.javaruntype.type;
 
 /* 
- * (non-javadoc)
- * 
+ *
  * Constant names.
  * 
  * @since 1.0
- * 
- * @author dfernandez
  *
  */
 final class TypeNaming {

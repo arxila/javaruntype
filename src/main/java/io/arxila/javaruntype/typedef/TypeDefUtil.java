@@ -29,14 +29,11 @@ import io.arxila.javaruntype.util.Utils;
 
 
 /*
- * (non-javadoc)
- * 
+ *
  * This class contains internal algorithms for TypeDef processing and
  * handling.
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 final class TypeDefUtil {

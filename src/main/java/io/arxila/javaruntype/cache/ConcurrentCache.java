@@ -40,8 +40,6 @@ import io.arxila.javaruntype.util.Utils;
  * 
  * @param <K> key type
  * @param <V> value type
- *  
- * @author Daniel Fern&aacute;ndez
  *
  */
 public final class ConcurrentCache<K,V> {

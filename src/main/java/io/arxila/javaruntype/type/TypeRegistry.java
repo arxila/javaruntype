@@ -27,8 +27,7 @@ import io.arxila.javaruntype.cache.ConcurrentCache;
 
 
 /*
- * (non-javadoc)
- * 
+ *
  * This is the registry of types, a synchronized cache which ensures
  * that only one object of each type exists in memory at a time.
  * 
@@ -38,8 +37,6 @@ import io.arxila.javaruntype.cache.ConcurrentCache;
  * 
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 final class TypeRegistry {

@@ -58,8 +58,6 @@ import java.io.Serializable;
  * </p>
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public interface TypeDefVariable extends Serializable {

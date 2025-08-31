@@ -54,14 +54,11 @@ import io.arxila.javaruntype.typedef.TypeDefs;
 import io.arxila.javaruntype.util.Utils;
 
 /*
- * (non-javadoc)
- * 
+ *
  * This class contains internal algorithms for Type processing and
  * handling.
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 final class TypeUtil {

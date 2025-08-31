@@ -31,8 +31,6 @@ package io.arxila.javaruntype.type;
  * 
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public final class StandardTypeParameter<T> extends TypeParameter<T> {

@@ -22,8 +22,7 @@ package io.arxila.javaruntype.typedef;
 import io.arxila.javaruntype.cache.ConcurrentCache;
 
 /*
- * (non-javadoc)
- * 
+ *
  * This is the registry of type definitions, a synchronized cache which ensures
  * that only one object of each type definition exists in memory at a time.
  * 
@@ -32,8 +31,6 @@ import io.arxila.javaruntype.cache.ConcurrentCache;
  * memory usage under heavy processing load. 
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 final class TypeDefRegistry {

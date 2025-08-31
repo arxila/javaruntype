@@ -23,8 +23,6 @@ package io.arxila.javaruntype.exceptions;
 /**
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public class TypeValidationException extends RuntimeException {

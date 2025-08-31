@@ -28,8 +28,6 @@ package io.arxila.javaruntype.typedef;
  * </p>
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public final class InnerNamedTypeDefVariable implements InnerTypeDefVariable {

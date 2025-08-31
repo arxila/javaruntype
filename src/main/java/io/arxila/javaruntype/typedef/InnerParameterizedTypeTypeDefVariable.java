@@ -32,8 +32,6 @@ import io.arxila.javaruntype.util.Utils;
  * </p>
  * 
  * @since 1.0
- * 
- * @author Daniel Fern&aacute;ndez
  *
  */
 public final class InnerParameterizedTypeTypeDefVariable 

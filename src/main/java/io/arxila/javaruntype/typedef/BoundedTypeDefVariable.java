@@ -37,8 +37,6 @@ import io.arxila.javaruntype.util.Utils;
  * 
  * @since 1.0
  * 
- * @author Daniel Fern&aacute;ndez
- *
  */
 public final class BoundedTypeDefVariable implements TypeDefVariable {
 
