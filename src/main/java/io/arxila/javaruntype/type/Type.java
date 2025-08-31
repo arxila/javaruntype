@@ -22,6 +22,7 @@ package io.arxila.javaruntype.type;
 import java.io.ObjectStreamException;
 import java.io.Serializable;
 import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
 import java.util.Collections;
@@ -62,6 +63,8 @@ import io.arxila.javaruntype.util.Utils;
  *
  */
 public final class Type<T> implements Serializable {
+
+    private static final Class<?>[] EMPTY_CLASS_ARRAY = new Class<?>[0];
 
     private static final long serialVersionUID = 2376256493847227243L;
     
@@ -318,12 +321,14 @@ public final class Type<T> implements Serializable {
      * @return an object created with the default constructor or a zero-dimensions array
      * @throws InstantiationException if the type cannot be instantiated
      * @throws IllegalAccessException if the type cannot be instantiated
+     * @throws NoSuchMethodException if the type cannot be instantiated
+     * @throws InvocationTargetException if the type cannot be instantiated
      */
-    public Object newInstance() 
-            throws InstantiationException, IllegalAccessException {
+    public Object newInstance()
+            throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         
         if (this.arrayDimensions == 0) {
-            return this.componentClass.newInstance();
+            return this.componentClass.getDeclaredConstructor(EMPTY_CLASS_ARRAY).newInstance();
         }
         
         final int[] zeroDims = new int[this.arrayDimensions];

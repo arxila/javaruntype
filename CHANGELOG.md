@@ -5,6 +5,7 @@ Change Log
 -----
 
   * Added support for Java records.
+  * Code cleanup.
 
 
 1.3
