@@ -104,7 +104,7 @@ public final class ConcurrentCache<K,V> {
      * <p>
      * Puts a value into the cache and returns it. If a value already
      * existed for the same key, the existing value is not modified and is
-     * returned instead of the one passed as parameter. This ensures only one
+     * returned instead of the one passed as a parameter. This ensures only one
      * object for each key exists at a time. 
      * </p>
      * 
