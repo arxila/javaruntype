@@ -17,7 +17,7 @@
  *
  * =========================================================================
  */
-package io.arxila.javaruntype.type.testtypes;
+package io.arxila.javaruntype.testtypes;
 
 import java.io.Serializable;
 import java.util.Collection;

@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-public class TestTypeFromJavaLangReflectType {
+public class TypeFromJavaLangReflectTypeTest {
 
     
     public String m1() {
@@ -75,15 +75,15 @@ public class TestTypeFromJavaLangReflectType {
     @Test
     public void testForJavaLangReflectType() throws Exception {
         
-        final Method m1 = TestTypeFromJavaLangReflectType.class.getMethod("m1");
-        final Method m2 = TestTypeFromJavaLangReflectType.class.getMethod("m2");
-        final Method m3 = TestTypeFromJavaLangReflectType.class.getMethod("m3");
-        final Method m4 = TestTypeFromJavaLangReflectType.class.getMethod("m4");
-        final Method m5 = TestTypeFromJavaLangReflectType.class.getMethod("m5");
-        final Method m6 = TestTypeFromJavaLangReflectType.class.getMethod("m6");
-        final Method m7 = TestTypeFromJavaLangReflectType.class.getMethod("m7");
-        final Method m8 = TestTypeFromJavaLangReflectType.class.getMethod("m8");
-        final Method m9 = TestTypeFromJavaLangReflectType.class.getMethod("m9");
+        final Method m1 = TypeFromJavaLangReflectTypeTest.class.getMethod("m1");
+        final Method m2 = TypeFromJavaLangReflectTypeTest.class.getMethod("m2");
+        final Method m3 = TypeFromJavaLangReflectTypeTest.class.getMethod("m3");
+        final Method m4 = TypeFromJavaLangReflectTypeTest.class.getMethod("m4");
+        final Method m5 = TypeFromJavaLangReflectTypeTest.class.getMethod("m5");
+        final Method m6 = TypeFromJavaLangReflectTypeTest.class.getMethod("m6");
+        final Method m7 = TypeFromJavaLangReflectTypeTest.class.getMethod("m7");
+        final Method m8 = TypeFromJavaLangReflectTypeTest.class.getMethod("m8");
+        final Method m9 = TypeFromJavaLangReflectTypeTest.class.getMethod("m9");
 
         final java.lang.reflect.Type tm1 = m1.getGenericReturnType();
         final java.lang.reflect.Type tm2 = m2.getGenericReturnType();

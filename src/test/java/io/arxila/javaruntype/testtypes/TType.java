@@ -17,16 +17,24 @@
  *
  * =========================================================================
  */
-package io.arxila.javaruntype.type.testtypes;
+package io.arxila.javaruntype.testtypes;
 
-import java.io.Serializable;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Set;
 
-public class TType2<X> extends HashMap<LinkedHashMap<String,X>, List<Set<Serializable>>>{
+@SuppressWarnings("unchecked")
+public class TType <Z,Y extends Number&Comparable<Float>,X extends Z> extends TParentType<Y>
+        implements Comparable {
 
-    private static final long serialVersionUID = 106720432524295650L;
 
+    private static final long serialVersionUID = 5957929133996499746L;
+
+
+    public TType() {
+        super();
+    }
+
+
+    public int compareTo(Object o) {
+        return 0;
+    }
+    
 }

@@ -19,21 +19,22 @@
  */
 package io.arxila.javaruntype.type;
 
-import io.arxila.javaruntype.exceptions.TypeRecognitionException;
 import io.arxila.javaruntype.exceptions.TypeValidationException;
-import org.junit.jupiter.api.Test;
-
 import java.io.Serializable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 import java.lang.reflect.Method;
 import java.util.List;
+import org.junit.jupiter.api.Test;
 
 import static java.lang.annotation.ElementType.TYPE_USE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TestParsingEdgeCases {
+public class ParsingEdgeCasesTest {
 
     // Type-use annotations for the annotated types test
     @Target(TYPE_USE)
@@ -74,7 +75,7 @@ public class TestParsingEdgeCases {
 
     @Test
     public void testIntersectionTypeViaReflection_validSubstitution() throws Exception {
-        Method m = TestParsingEdgeCases.class.getMethod("mIntersection");
+        Method m = ParsingEdgeCasesTest.class.getMethod("mIntersection");
         java.lang.reflect.Type reflected = m.getGenericReturnType();
 
         // Substitute X -> Integer (which satisfies Number & Serializable)
@@ -85,7 +86,7 @@ public class TestParsingEdgeCases {
 
     @Test
     public void testIntersectionTypeViaReflection_invalidSubstitution() throws Exception {
-        Method m = TestParsingEdgeCases.class.getMethod("mIntersection");
+        Method m = ParsingEdgeCasesTest.class.getMethod("mIntersection");
         java.lang.reflect.Type reflected = m.getGenericReturnType();
 
         // Substitute X -> String (does not satisfy Number)
@@ -98,7 +99,7 @@ public class TestParsingEdgeCases {
 
     @Test
     public void testAnnotatedTypesIgnoredByReflection() throws Exception {
-        Method m = TestParsingEdgeCases.class.getMethod("mAnnotated");
+        Method m = ParsingEdgeCasesTest.class.getMethod("mAnnotated");
         java.lang.reflect.Type reflected = m.getGenericReturnType();
 
         // Type-use annotations are ignored in java.lang.reflect.Type here; structure should match unannotated type

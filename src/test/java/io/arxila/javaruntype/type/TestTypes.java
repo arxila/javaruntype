@@ -58,70 +58,70 @@ public class TestTypes {
         checkValidName("List<? super Integer>");
         checkInvalidName("List<?,?>");
         checkInvalidName("List<Integer,Integer>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TEnum");
-        checkValidName("List<io.arxila.javaruntype.type.testtypes.TEnum>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TEnum<String>");
-        checkValidName("List<io.arxila.javaruntype.type.testtypes.TEnum[][]>");
+        checkValidName("io.arxila.javaruntype.testtypes.TEnum");
+        checkValidName("List<io.arxila.javaruntype.testtypes.TEnum>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TEnum<String>");
+        checkValidName("List<io.arxila.javaruntype.testtypes.TEnum[][]>");
         checkValidName("Map");
         checkValidName("Map<?,?>");
         checkValidName("Map<String,String>");
         checkValidName("Map<Integer,String>");
         checkValidName("Map<Object,?>");
-        checkValidName("EnumMap<io.arxila.javaruntype.type.testtypes.TEnum,String[]>");
+        checkValidName("EnumMap<io.arxila.javaruntype.testtypes.TEnum,String[]>");
         checkInvalidName("EnumMap<String,String[]>");
         checkValidName("HashMap<String,Integer>");
         checkValidName("AbstractMap<String,List<? extends Number>>");
         checkValidName("LinkedHashMap<String[],List<? extends Number[][]>[]>[]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<?>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<?,?>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<?,?,?>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<?,?,?,?>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<Number,?,Double>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<Number,?,String>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<Number>,?,List<Number>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<Number>,?,ArrayList<Number>>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<List<Number>,?,List<Integer>>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<List<Number>,?,ArrayList<Integer>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<? extends Number>,?,List<Integer>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<? extends Number>,?,ArrayList<Integer>>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<List<List<? extends Number>>,?,ArrayList<List<Integer>>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<List<Integer>>,?,ArrayList<List<Integer>>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<List<Integer[]>>,?,ArrayList<List<Integer[]>>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<List<Integer>>,?,ArrayList<List<Integer>>>[]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<List<Integer[]>>[][],?,ArrayList<List<Integer[]>>[][]>[][]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<List<Integer>[]>[][],?,ArrayList<List<Integer>[]>[][]>[][]");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<?,Number,?>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<?,Integer,?>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<?,Float,?>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<?,Float,?>[]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType<List<List<Integer>[]>[][],Float,ArrayList<List<Integer>[]>[][]>[][]");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType<List<List<Integer>[]>[][], Number,ArrayList<List<Integer>[]>[][]>[][]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<?>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<?>[]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<?>[][][]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<String>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<String>[][]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<String[][]>[][]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? extends String>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? extends String>[]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? extends String[]>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? extends String[]>[]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? extends List<String[]>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? extends List<? extends String[]>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? extends List<? super String[]>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? super String>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? super String>[]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? super String[]>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? super String[]>[]");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? super List<String[]>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? super List<String[]>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? super List<? extends String[]>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType2<? super List<? super String[]>>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType3");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType3<?,?,?>");
-        checkValidName("io.arxila.javaruntype.type.testtypes.TType3<?,?,Integer>");
-        checkInvalidName("io.arxila.javaruntype.type.testtypes.TType3<?,?,Number>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<?>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<?,?>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<?,?,?>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<?,?,?,?>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<Number,?,Double>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<Number,?,String>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<Number>,?,List<Number>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<Number>,?,ArrayList<Number>>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<List<Number>,?,List<Integer>>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<List<Number>,?,ArrayList<Integer>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<? extends Number>,?,List<Integer>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<? extends Number>,?,ArrayList<Integer>>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<List<List<? extends Number>>,?,ArrayList<List<Integer>>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<List<Integer>>,?,ArrayList<List<Integer>>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<List<Integer[]>>,?,ArrayList<List<Integer[]>>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<List<Integer>>,?,ArrayList<List<Integer>>>[]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<List<Integer[]>>[][],?,ArrayList<List<Integer[]>>[][]>[][]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<List<Integer>[]>[][],?,ArrayList<List<Integer>[]>[][]>[][]");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<?,Number,?>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<?,Integer,?>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<?,Float,?>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<?,Float,?>[]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType<List<List<Integer>[]>[][],Float,ArrayList<List<Integer>[]>[][]>[][]");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType<List<List<Integer>[]>[][], Number,ArrayList<List<Integer>[]>[][]>[][]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<?>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<?>[]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<?>[][][]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<String>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<String>[][]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<String[][]>[][]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? extends String>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? extends String>[]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? extends String[]>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? extends String[]>[]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? extends List<String[]>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? extends List<? extends String[]>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? extends List<? super String[]>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? super String>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? super String>[]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? super String[]>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? super String[]>[]");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? super List<String[]>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? super List<String[]>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? super List<? extends String[]>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType2<? super List<? super String[]>>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType3");
+        checkValidName("io.arxila.javaruntype.testtypes.TType3<?,?,?>");
+        checkValidName("io.arxila.javaruntype.testtypes.TType3<?,?,Integer>");
+        checkInvalidName("io.arxila.javaruntype.testtypes.TType3<?,?,Number>");
         
         
     }
@@ -464,8 +464,8 @@ public class TestTypes {
         Type<?> enumType = Types.forName("Enum");
         Type<?> listEnumType = Types.forName("List<Enum>");
         Type<?> listExtendsEnumType = Types.forName("List<? extends Enum>");
-        Type<?> testEnumType = Types.forName("io.arxila.javaruntype.type.testtypes.TEnum");
-        Type<?> listTestEnumType = Types.forName("List<io.arxila.javaruntype.type.testtypes.TEnum>");
+        Type<?> testEnumType = Types.forName("io.arxila.javaruntype.testtypes.TEnum");
+        Type<?> listTestEnumType = Types.forName("List<io.arxila.javaruntype.testtypes.TEnum>");
         
         assertTrue(enumType.isAssignableFrom(testEnumType));
         assertFalse(testEnumType.isAssignableFrom(enumType));
@@ -475,7 +475,7 @@ public class TestTypes {
         assertFalse(listTestEnumType.isAssignableFrom(listEnumType));
         
         Type<?> enumMapRawRawType = Types.forName("EnumMap<?,?>");
-        Type<?> enumMapTestEnumRawType = Types.forName("EnumMap<io.arxila.javaruntype.type.testtypes.TEnum,?>");
+        Type<?> enumMapTestEnumRawType = Types.forName("EnumMap<io.arxila.javaruntype.testtypes.TEnum,?>");
 
         assertTrue(enumMapRawRawType.isAssignableFrom(enumMapRawRawType));
         assertTrue(enumMapRawRawType.isAssignableFrom(enumMapTestEnumRawType));
@@ -485,8 +485,63 @@ public class TestTypes {
 
         
     }
-    
-    
+    // Add tests for BoundedTypes: deserialization and assignability
+    @Test
+    public void testBoundedTypesAssignability() throws Exception {
+        final String p = "io.arxila.javaruntype.testtypes.BoundedTypes$";
+
+        // Bounded2<E, T extends Serializable>
+        Type<?> bounded2Raw = Types.forName(p + "Bounded2<?,?>");
+        Type<?> bounded2ObjStr = Types.forName(p + "Bounded2<java.lang.Object, java.lang.String>");
+        Type<?> bounded2ObjInt = Types.forName(p + "Bounded2<java.lang.Object, java.lang.Integer>");
+
+        // Raw is assignable from any instantiation
+        assertTrue(bounded2Raw.isAssignableFrom(bounded2ObjStr));
+        assertTrue(bounded2Raw.isAssignableFrom(bounded2ObjInt));
+        // Invariance
+        assertTrue(bounded2ObjStr.isAssignableFrom(bounded2ObjStr));
+        assertFalse(bounded2ObjStr.isAssignableFrom(bounded2ObjInt));
+        assertFalse(bounded2ObjInt.isAssignableFrom(bounded2ObjStr));
+
+        // Bounded1<E, T extends E>
+        Type<?> bounded1Raw = Types.forName(p + "Bounded1<?,?>");
+        Type<?> bounded1CharSeqStr = Types.forName(p + "Bounded1<java.lang.CharSequence, java.lang.String>"); // valid: String extends CharSequence
+        Type<?> bounded1ObjStr2 = Types.forName(p + "Bounded1<java.lang.Object, java.lang.String>");
+
+        assertTrue(bounded1Raw.isAssignableFrom(bounded1CharSeqStr));
+        assertTrue(bounded1Raw.isAssignableFrom(bounded1ObjStr2));
+        assertTrue(bounded1CharSeqStr.isAssignableFrom(bounded1CharSeqStr));
+        assertFalse(bounded1CharSeqStr.isAssignableFrom(bounded1ObjStr2));
+        assertFalse(bounded1ObjStr2.isAssignableFrom(bounded1CharSeqStr));
+
+        // Bounded3<E extends Serializable, T extends E>
+        Type<?> bounded3Raw = Types.forName(p + "Bounded3<?,?>");
+        Type<?> bounded3SerStr = Types.forName(p + "Bounded3<java.io.Serializable, java.lang.String>");
+        Type<?> bounded3StrStr = Types.forName(p + "Bounded3<java.lang.String, java.lang.String>");
+
+        assertTrue(bounded3Raw.isAssignableFrom(bounded3SerStr));
+        assertTrue(bounded3Raw.isAssignableFrom(bounded3StrStr));
+        assertTrue(bounded3SerStr.isAssignableFrom(bounded3SerStr));
+        assertTrue(bounded3StrStr.isAssignableFrom(bounded3StrStr));
+        assertFalse(bounded3SerStr.isAssignableFrom(bounded3StrStr));
+        assertFalse(bounded3StrStr.isAssignableFrom(bounded3SerStr));
+
+        // Bounded4<E,T,X extends Collection<T>>
+        Type<?> bounded4Raw = Types.forName(p + "Bounded4<?,?,?>");
+        Type<?> bounded4ObjIntColInt = Types.forName(p + "Bounded4<java.lang.Object, java.lang.Integer, java.util.Collection<java.lang.Integer>>");
+
+        assertTrue(bounded4Raw.isAssignableFrom(bounded4ObjIntColInt));
+        assertTrue(bounded4ObjIntColInt.isAssignableFrom(bounded4ObjIntColInt));
+
+        // Bounded5<E,T,X extends Collection<? extends T>>
+        Type<?> bounded5Raw = Types.forName(p + "Bounded5<?,?,?>");
+        Type<?> bounded5ObjIntColExtendsInt = Types.forName(p + "Bounded5<java.lang.Object, java.lang.Integer, java.util.Collection<? extends java.lang.Integer>>");
+
+        assertTrue(bounded5Raw.isAssignableFrom(bounded5ObjIntColExtendsInt));
+        assertTrue(bounded5ObjIntColExtendsInt.isAssignableFrom(bounded5ObjIntColExtendsInt));
+    }
+
+
     private void checkValidName(String name) {
         Type<?> type = Types.forName(name);
         String strType = type.getName();

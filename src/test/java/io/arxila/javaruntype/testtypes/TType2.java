@@ -17,26 +17,16 @@
  *
  * =========================================================================
  */
-package io.arxila.javaruntype.type.testtypes;
+package io.arxila.javaruntype.testtypes;
 
-import io.arxila.javaruntype.type.Type;
-import io.arxila.javaruntype.type.Types;
+import java.io.Serializable;
 import java.util.HashMap;
-import java.util.Map;
-import org.junit.jupiter.api.Test;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+public class TType2<X> extends HashMap<LinkedHashMap<String,X>, List<Set<Serializable>>>{
 
-public class TestTypeFromJavaLangReflectWithSelfBoundedTypeVariables {
-    public interface X<T extends Comparable<T>> {
-    }
+    private static final long serialVersionUID = 106720432524295650L;
 
-    @Test public void test() throws Exception {
-        Map<String, Type<?>> vars = new HashMap<String, Type<?>>();
-        vars.put("T", Types.forJavaLangReflectType(Integer.class));
-
-        Type<?> t = Types.forJavaLangReflectType(X.class.getTypeParameters()[0], vars);
-
-        assertEquals(Integer.class, t.getRawClass());
-    }
 }

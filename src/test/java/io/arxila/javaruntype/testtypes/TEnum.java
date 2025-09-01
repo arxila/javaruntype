@@ -17,12 +17,12 @@
  *
  * =========================================================================
  */
-package io.arxila.javaruntype.type.testtypes;
+package io.arxila.javaruntype.testtypes;
 
-import java.util.List;
+public enum TEnum {
 
-public class TType4<Y,X extends List<List<java.util.Map<Y,Y[]>>>> {
-
-    // nothing 
+    ONE,
+    TWO,
+    THREE
     
 }
