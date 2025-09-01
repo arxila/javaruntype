@@ -39,7 +39,10 @@ import java.io.Serializable;
  * @since 1.0
  *
  */
-public interface InnerTypeDefVariable extends Serializable {
+public sealed interface InnerTypeDefVariable
+        extends Serializable
+        permits InnerClassTypeDefVariable, InnerNamedTypeDefVariable,
+                InnerParameterizedTypeTypeDefVariable, InnerWildcardTypeDefVariable {
     
     // Empty. Just a marker interface
     

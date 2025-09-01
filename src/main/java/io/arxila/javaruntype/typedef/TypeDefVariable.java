@@ -60,7 +60,9 @@ import java.io.Serializable;
  * @since 1.0
  *
  */
-public interface TypeDefVariable extends Serializable {
+public sealed interface TypeDefVariable
+        extends Serializable
+        permits BoundedTypeDefVariable, NamedTypeDefVariable {
     
     /**
      * Returns the variable name.

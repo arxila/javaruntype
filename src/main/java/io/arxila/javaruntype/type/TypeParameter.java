@@ -39,7 +39,9 @@ import java.io.Serializable;
  * @since 1.0
  *
  */
-public abstract class TypeParameter<T> implements Serializable {
+public abstract sealed class TypeParameter<T>
+        implements Serializable
+        permits ExtendsTypeParameter, StandardTypeParameter, SuperTypeParameter, WildcardTypeParameter {
 
     
 	@Serial
