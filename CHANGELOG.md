@@ -6,6 +6,7 @@ Change Log
 
   * Added support for Java records.
   * Fixed type cache not properly clearing the key queue.
+  * Fixed type definitions not being correctly parsed when type parameters included concrete classes.
   * Code cleanup.
 
 
