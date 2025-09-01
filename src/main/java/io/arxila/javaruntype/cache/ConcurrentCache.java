@@ -19,15 +19,14 @@
  */
 package io.arxila.javaruntype.cache;
 
-import java.util.Queue;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedQueue;
-
+import io.arxila.atomichash.AtomicHashMap;
 import io.arxila.javaruntype.util.Utils;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * <p>
- * Base synchronized cache for <kbd>*Registry</kbd> objects.
+ * Base concurrent, non-blocking cache for type structures and their relations throughout JavaRuntype.
  * </p>
  * <p>
  * <b>Do not</b> use this class directly.
@@ -46,14 +45,14 @@ public final class ConcurrentCache<K,V> {
 
     private final static int DEFAULT_MAX_ELEMENTS = 100;
     
-    private final ConcurrentHashMap<K,V> cache; 
+    private final AtomicHashMap<K,V> cache;
     private final int maxElements;
     private final Queue<K> keysQueue;
     
     
     /**
      * <p>
-     * Create a new synchronized cache.
+     * Create a new cache.
      * </p>
      * 
      */
@@ -63,7 +62,7 @@ public final class ConcurrentCache<K,V> {
     
     /**
      * <p>
-     * Create a new synchronized cache specifying a maximum size for the cache
+     * Create a new cache specifying a maximum size for the cache
      * </p>
      *
      * @param maxElements the maximum number of elements this cache can contain
@@ -71,7 +70,7 @@ public final class ConcurrentCache<K,V> {
     public ConcurrentCache(final int maxElements) {
         super();
         Utils.validateIsTrue(maxElements > 1, "Max elements must be > 1");
-        this.cache = new ConcurrentHashMap<K,V>();
+        this.cache = new AtomicHashMap<K,V>();
         this.maxElements = maxElements;
         this.keysQueue = new ConcurrentLinkedQueue<K>();
     }

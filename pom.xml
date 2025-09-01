@@ -45,7 +45,7 @@
   </scm>
 
   <properties>
-    <java.version>17</java.version>
+    <atomichash.version>1.0.1</atomichash.version>
   </properties>
 
   <build>
@@ -184,6 +184,12 @@
   </build>
 
   <dependencies>
+
+    <dependency>
+      <groupId>io.arxila.atomichash</groupId>
+      <artifactId>atomichash</artifactId>
+      <version>${atomichash.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.antlr</groupId>
