@@ -20,6 +20,7 @@
 package io.arxila.javaruntype.type;
 
 import java.io.ObjectStreamException;
+import java.io.Serial;
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
@@ -66,6 +67,7 @@ public final class Type<T> implements Serializable {
 
     private static final Class<?>[] EMPTY_CLASS_ARRAY = new Class<?>[0];
 
+    @Serial
     private static final long serialVersionUID = 2376256493847227243L;
     
     private final Class<?> componentClass;

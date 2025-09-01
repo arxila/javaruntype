@@ -20,6 +20,7 @@
 package io.arxila.javaruntype.typedef;
 
 import io.arxila.javaruntype.util.Utils;
+import java.io.Serial;
 
 
 /**
@@ -41,6 +42,7 @@ import io.arxila.javaruntype.util.Utils;
 public final class BoundedTypeDefVariable implements TypeDefVariable {
 
     
+    @Serial
     private static final long serialVersionUID = -7857569027190529682L;
     
     private final String variableName;

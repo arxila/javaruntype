@@ -19,6 +19,7 @@
  */
 package io.arxila.javaruntype.type;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -41,7 +42,8 @@ import java.io.Serializable;
 public abstract class TypeParameter<T> implements Serializable {
 
     
-	private static final long serialVersionUID = 1666015437003002214L;
+	@Serial
+    private static final long serialVersionUID = 1666015437003002214L;
 
 	
 

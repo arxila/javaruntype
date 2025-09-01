@@ -19,6 +19,8 @@
  */
 package io.arxila.javaruntype.type;
 
+import java.io.Serial;
+
 /**
  * <p>
  * This class represents a type parameter which only contains a <kbd>Type</kbd>.
@@ -35,6 +37,7 @@ package io.arxila.javaruntype.type;
  */
 public final class StandardTypeParameter<T> extends TypeParameter<T> {
 
+    @Serial
     private static final long serialVersionUID = -1799703488533881728L;
     
     private final Type<T> type;

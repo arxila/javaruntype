@@ -20,6 +20,8 @@
 package io.arxila.javaruntype.exceptions;
 
 
+import java.io.Serial;
+
 /**
  * 
  * @since 1.0
@@ -27,6 +29,7 @@ package io.arxila.javaruntype.exceptions;
  */
 public class TypeValidationException extends RuntimeException {
 
+    @Serial
     private static final long serialVersionUID = -7104333842847446754L;
 
     public TypeValidationException(String message) {

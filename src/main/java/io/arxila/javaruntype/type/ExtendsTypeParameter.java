@@ -19,6 +19,8 @@
  */
 package io.arxila.javaruntype.type;
 
+import java.io.Serial;
+
 /**
  * <p>
  * Represents a type parameter which contains an "extends" clause.
@@ -34,6 +36,7 @@ package io.arxila.javaruntype.type;
  */
 public final class ExtendsTypeParameter<T> extends TypeParameter<T> {
 
+    @Serial
     private static final long serialVersionUID = -3422656676188437147L;
     
 

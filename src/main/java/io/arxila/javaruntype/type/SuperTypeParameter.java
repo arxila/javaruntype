@@ -19,6 +19,8 @@
  */
 package io.arxila.javaruntype.type;
 
+import java.io.Serial;
+
 /**
  * <p>
  * Represents a type parameter which contains a "super" clause.
@@ -34,6 +36,7 @@ package io.arxila.javaruntype.type;
  */
 public final class SuperTypeParameter<T> extends TypeParameter<T> {
 
+    @Serial
     private static final long serialVersionUID = -1844549429272543154L;
     
 

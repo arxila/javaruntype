@@ -19,6 +19,8 @@
  */
 package io.arxila.javaruntype.typedef;
 
+import java.io.Serial;
+
 /**
  * <p>
  * Represents a type definition variable that only specifies a variable name (without bounds).
@@ -30,6 +32,7 @@ package io.arxila.javaruntype.typedef;
  */
 public final class NamedTypeDefVariable implements TypeDefVariable {
     
+    @Serial
     private static final long serialVersionUID = 2342239160968747663L;
     
     private final String variableName;

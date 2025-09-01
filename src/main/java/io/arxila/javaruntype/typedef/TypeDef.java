@@ -20,6 +20,7 @@
 package io.arxila.javaruntype.typedef;
 
 import java.io.ObjectStreamException;
+import java.io.Serial;
 import java.io.Serializable;
 
 import io.arxila.javaruntype.util.Utils;
@@ -66,6 +67,7 @@ import io.arxila.javaruntype.util.Utils;
  */
 public final class TypeDef implements Serializable {
     
+    @Serial
     private static final long serialVersionUID = 3446428616087989437L;
 
     private static final String NAME_TYPE_VARIABLES_START = "<";

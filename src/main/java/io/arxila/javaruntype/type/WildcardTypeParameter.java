@@ -20,6 +20,7 @@
 package io.arxila.javaruntype.type;
 
 import java.io.ObjectStreamException;
+import java.io.Serial;
 
 /**
  * <p>
@@ -36,6 +37,7 @@ import java.io.ObjectStreamException;
  */
 public final class WildcardTypeParameter extends TypeParameter<Object> {
 
+    @Serial
     private static final long serialVersionUID = 9058744867380964414L;
 
     static final WildcardTypeParameter UNKNOWN = new WildcardTypeParameter();

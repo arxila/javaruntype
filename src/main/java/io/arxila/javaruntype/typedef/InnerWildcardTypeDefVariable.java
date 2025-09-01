@@ -20,6 +20,7 @@
 package io.arxila.javaruntype.typedef;
 
 import io.arxila.javaruntype.util.Utils;
+import java.io.Serial;
 
 
 /**
@@ -35,6 +36,7 @@ import io.arxila.javaruntype.util.Utils;
  */
 public final class InnerWildcardTypeDefVariable implements InnerTypeDefVariable {
 
+    @Serial
     private static final long serialVersionUID = -8238722236323950838L;
     
     private final InnerTypeDefVariable upperBound;

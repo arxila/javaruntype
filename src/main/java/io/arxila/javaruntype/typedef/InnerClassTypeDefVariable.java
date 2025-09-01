@@ -19,6 +19,8 @@
  */
 package io.arxila.javaruntype.typedef;
 
+import java.io.Serial;
+
 /**
  * <p>
  * Represents an inner type definition variable which specifies a class.
@@ -33,6 +35,7 @@ package io.arxila.javaruntype.typedef;
  */
 public final class InnerClassTypeDefVariable implements InnerTypeDefVariable {
 
+    @Serial
     private static final long serialVersionUID = -8577766318173021770L;
     
     private final Class<?> componentClass;

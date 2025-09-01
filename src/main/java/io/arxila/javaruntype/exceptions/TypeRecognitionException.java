@@ -20,6 +20,8 @@
 package io.arxila.javaruntype.exceptions;
 
 
+import java.io.Serial;
+
 /**
  * 
  * @since 1.0
@@ -27,6 +29,7 @@ package io.arxila.javaruntype.exceptions;
  */
 public class TypeRecognitionException extends RuntimeException {
 
+    @Serial
     private static final long serialVersionUID = -4337867945837834337L;
 
     public TypeRecognitionException(String message) {
