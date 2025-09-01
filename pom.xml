@@ -37,7 +37,7 @@
   <packaging>jar</packaging>
   <version>2.0.0-SNAPSHOT</version>
   <name>javaruntype</name>
-  <description>JavaRuntype is a compact library aimed at offering a runtime representation of the Java type system</description>
+  <description>A runtime representation of the Java type system</description>
 
   <scm>
     <url>https://github.com/arxila/javaruntype</url>
