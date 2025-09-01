@@ -80,7 +80,17 @@ final class TypeDefUtil {
     private static InnerTypeDefVariable getInnerTypeDefDeclaration(
             final Type typeDeclaration, final int arrayDimensions) {
 
-        if (typeDeclaration instanceof ParameterizedType) {
+        if (typeDeclaration instanceof Class<?>) {
+
+            final Class<?> typeClass = (Class<?>) typeDeclaration;
+            if (typeClass.isArray()) {
+                return getInnerTypeDefDeclaration(
+                        typeClass.getComponentType(),
+                        (arrayDimensions + 1));
+            }
+            return new InnerClassTypeDefVariable(typeClass, arrayDimensions);
+
+        } else if (typeDeclaration instanceof ParameterizedType) {
 
             final ParameterizedType parameterizedType = 
                 (ParameterizedType) typeDeclaration;
