@@ -35,7 +35,7 @@
   <groupId>io.arxila.javaruntype</groupId>
   <artifactId>javaruntype</artifactId>
   <packaging>jar</packaging>
-  <version>2.0.0</version>
+  <version>2.0.1-SNAPSHOT</version>
   <name>javaruntype</name>
   <description>A runtime representation of the Java type system</description>
 
