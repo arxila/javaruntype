@@ -64,8 +64,6 @@ import java.util.Set;
  */
 public final class Type<T> implements Serializable {
 
-    private static final Class<?>[] EMPTY_CLASS_ARRAY = new Class<?>[0];
-
     @Serial
     private static final long serialVersionUID = 2376256493847227243L;
     
@@ -329,7 +327,7 @@ public final class Type<T> implements Serializable {
             throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         
         if (this.arrayDimensions == 0) {
-            return this.componentClass.getDeclaredConstructor(EMPTY_CLASS_ARRAY).newInstance();
+            return this.componentClass.getDeclaredConstructor().newInstance();
         }
         
         final int[] zeroDims = new int[this.arrayDimensions];

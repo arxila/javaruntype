@@ -165,13 +165,13 @@ final class TypeUtil {
         }
         
         // Maybe the type has been specified as raw without the wildcards
-        if (typeParameters.size() == 0) {
+        if (typeParameters.isEmpty()) {
             for (int i = 0; i < typeClass.getTypeParameters().length; i++) {
                 typeParameters.add(WildcardTypeParameter.UNKNOWN);
             }
         }
         
-        final TypeParameter[] typeParametersArray = 
+        final TypeParameter<?>[] typeParametersArray =
             typeParameters.toArray(new TypeParameter[typeParameters.size()]);
         
         final TypeRegistry typeRegistry = TypeRegistry.getInstance();
