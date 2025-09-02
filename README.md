@@ -1,5 +1,5 @@
-# JavaRuntype
-=============
+JavaRuntype
+===========
 
 JavaRuntype is a compact Java library that provides a runtime representation of the Java type system. It lets 
 you model, build, inspect and compare Java types (including generics, bounds and arrays) at runtime in a 
