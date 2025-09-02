@@ -59,13 +59,9 @@ public final class NamedTypeDefVariable implements TypeDefVariable {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof NamedTypeDefVariable other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final NamedTypeDefVariable other = (NamedTypeDefVariable) obj;
         return this.variableName.equals(other.variableName);
     }
 

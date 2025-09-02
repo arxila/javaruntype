@@ -101,13 +101,12 @@ public final class BoundedTypeDefVariable implements TypeDefVariable {
 
     @Override
     public boolean equals(final Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (!(obj instanceof BoundedTypeDefVariable other)) {
             return false;
-        if (getClass() != obj.getClass())
-            return false;
-        final BoundedTypeDefVariable other = (BoundedTypeDefVariable) obj;
+        }
         return this.stringRepresentation.equals(other.stringRepresentation);
     }
 

@@ -157,9 +157,9 @@ public class Utils {
         }
         final Class<?> leftClass = left.getClass();
         if (!leftClass.isArray()) {
-            if (left instanceof java.math.BigDecimal) {
-                if (right instanceof BigDecimal) {
-                    return (((BigDecimal)left).compareTo((BigDecimal)right) == 0);
+            if (left instanceof BigDecimal bigDecimalLeft) {
+                if (right instanceof BigDecimal bigDecimalRight) {
+                    return (bigDecimalLeft.compareTo(bigDecimalRight) == 0);
                 }
                 return false;
             }

@@ -347,32 +347,27 @@ final class TypeUtil {
         for (int i = 0; i < innerVariables.length; i++) {
 
             
-            if (innerVariables[i] instanceof InnerClassTypeDefVariable) {
+            if (innerVariables[i] instanceof InnerClassTypeDefVariable classVariable) {
                 
                 /*
                  * We simply get the raw type (as it is not
                  * an InnerParameterizedTypeDefVariable) and add it to the
                  * types array.
                  */
-                
-                final InnerClassTypeDefVariable classVariable = 
-                    (InnerClassTypeDefVariable) innerVariables[i];
-                final Type<?> innerType = 
+
+                final Type<?> innerType =
                     getRawTypeForClass(
                             classVariable.getComponentClass(), 
                             classVariable.getArrayDimensions());
                 types.add(innerType);
                 
-            } else if (innerVariables[i] instanceof InnerNamedTypeDefVariable) {
+            } else if (innerVariables[i] instanceof InnerNamedTypeDefVariable innerVariable) {
 
                 /*
                  * We will check the variables which already have an assigned
                  * type parameter (checkedTypeParameters).
                  */
-                
-                final InnerNamedTypeDefVariable innerVariable = 
-                    (InnerNamedTypeDefVariable) innerVariables[i];
-                
+
                 // We check if the variable has already been defined and checked
                 final TypeParameter<?> linkedTypeParameter = 
                     checkedTypeParametersByName.get(
@@ -388,7 +383,7 @@ final class TypeUtil {
                  * types which must conform
                  */
                 if (linkedTypeParameter instanceof WildcardTypeParameter) {
-                    
+
                     // No types to be added, any type would be valid
                     
                 } else if (linkedTypeParameter instanceof StandardTypeParameter<?>) {
@@ -459,22 +454,17 @@ final class TypeUtil {
         
         for (int i = 0; i < innerVariables.length; i++) {
 
-            if (innerVariables[i] instanceof InnerClassTypeDefVariable) {
-                
-                final InnerClassTypeDefVariable classVariable = 
-                    (InnerClassTypeDefVariable) innerVariables[i];
-                final Type<?> innerType = 
+            if (innerVariables[i] instanceof InnerClassTypeDefVariable classVariable) {
+
+                final Type<?> innerType =
                     getRawTypeForClass(
                             classVariable.getComponentClass(), 
                             classVariable.getArrayDimensions());
                 typeParameters[i] = 
-                    new StandardTypeParameter(innerType);
+                    new StandardTypeParameter<>(innerType);
 
-            } else if (innerVariables[i] instanceof InnerNamedTypeDefVariable) {
-                
-                final InnerNamedTypeDefVariable innerVariable = 
-                    (InnerNamedTypeDefVariable) innerVariables[i];
-                
+            } else if (innerVariables[i] instanceof InnerNamedTypeDefVariable innerVariable) {
+
                 // We check if the variable has already been defined and checked
                 TypeParameter<?> linkedTypeParameter = 
                     checkedTypeParametersByName.get(
@@ -513,12 +503,9 @@ final class TypeUtil {
                             containedType.getTypeParametersArray(), 
                             newArrayDimensions);
                 
-                typeParameters[i] = new StandardTypeParameter(newType);
+                typeParameters[i] = new StandardTypeParameter<>(newType);
                 
-            } else if (innerVariables[i] instanceof InnerWildcardTypeDefVariable) {
-                
-                final InnerWildcardTypeDefVariable wildcardVariable = 
-                    (InnerWildcardTypeDefVariable) innerVariables[i];
+            } else if (innerVariables[i] instanceof InnerWildcardTypeDefVariable wildcardVariable) {
 
                 if (wildcardVariable.isUnbound()) {
                     
@@ -692,7 +679,7 @@ final class TypeUtil {
 
         Class<?> componentClass = null;
         
-        if (typeDeclaration instanceof ParameterizedType) {
+        if (typeDeclaration instanceof ParameterizedType parameterizedTypeDeclaration) {
             
             /*
              * If the declaration is for a parameterized type and its 
@@ -702,10 +689,7 @@ final class TypeUtil {
              * the containing (original) class.
              */
 
-            final ParameterizedType parameterizedTypeDeclaration = 
-                (ParameterizedType) typeDeclaration;
-
-            // Get the type argument declarations as they appear in the 
+            // Get the type argument declarations as they appear in the
             // original type (eg: "class Original implements Map<A,B>" -> 
             // "[A,B]")
             final java.lang.reflect.Type[] parameterizedTypeDeclarationArguments = 
@@ -779,13 +763,13 @@ final class TypeUtil {
             final Type<?> originalType, final java.lang.reflect.Type typeDeclaration,
             final int arrayDimensions) {
         
-        if (typeDeclaration instanceof TypeVariable<?>) {
+        if (typeDeclaration instanceof TypeVariable<?> typeVariable) {
 
             /*
              * The type argument is a variable, as in "List<E>"
              */
             
-            final String argumentName = ((TypeVariable<?>) typeDeclaration).getName();
+            final String argumentName = typeVariable.getName();
 
             // Return a type with the suitable array dimensions
             final TypeParameter<?> typeParameter = 
@@ -825,18 +809,15 @@ final class TypeUtil {
                         newArrayDimensions);
             
             if (typeParameter instanceof StandardTypeParameter<?>) {
-                return new StandardTypeParameter(newType);
+                return new StandardTypeParameter<>(newType);
             } else if (typeParameter instanceof ExtendsTypeParameter<?>){
-                return new ExtendsTypeParameter(newType);
+                return new ExtendsTypeParameter<>(newType);
             } else { // typeParameter instanceof SuperTypeParameter
-                return new SuperTypeParameter(newType);
+                return new SuperTypeParameter<>(newType);
             }
 
-        } else if (typeDeclaration instanceof GenericArrayType) {
+        } else if (typeDeclaration instanceof GenericArrayType genericArrayType) {
 
-            final GenericArrayType genericArrayType = 
-                (GenericArrayType) typeDeclaration;
-            
             return resolveEquivalentTypeParameterByDeclaration(
                     originalType, genericArrayType.getGenericComponentType(), 
                     (arrayDimensions + 1));
@@ -1010,9 +991,8 @@ final class TypeUtil {
             
         }
         
-        if (type instanceof WildcardType) {
-            final WildcardType wildcardType = (WildcardType) type;
-            
+        if (type instanceof WildcardType wildcardType) {
+
             if (wildcardType.getLowerBounds() != null && wildcardType.getLowerBounds().length > 0) {
                 
                 final java.lang.reflect.Type[] lowerBounds = wildcardType.getLowerBounds();
@@ -1060,16 +1040,14 @@ final class TypeUtil {
         final java.lang.reflect.Type originalType, final java.lang.reflect.Type type,
         final Map<String, Type<?>> variableSubstitutions, final Set<TypeVariable<?>> validatedTypeVars) {
 
-        if (type instanceof Class<?>) {
-            
-            final Class<?> classType = (Class<?>) type;
+        if (type instanceof Class<?> classType) {
+
             return Types.forClass(classType);
             
         }
         
-        if (type instanceof GenericArrayType) {
-            
-            final GenericArrayType genericArrayType = (GenericArrayType) type;
+        if (type instanceof GenericArrayType genericArrayType) {
+
             final Type<?> componentType =
                     createFromJavaLangReflectType(originalType, genericArrayType.getGenericComponentType(),
                             variableSubstitutions, validatedTypeVars);
@@ -1080,9 +1058,8 @@ final class TypeUtil {
             
         }
         
-        if (type instanceof ParameterizedType) {
-            
-            final ParameterizedType parameterizedType = (ParameterizedType) type;
+        if (type instanceof ParameterizedType parameterizedType) {
+
             final java.lang.reflect.Type[] actualTypeParameters = parameterizedType.getActualTypeArguments();
             
             final TypeParameter<?>[] typeParameters = new TypeParameter<?>[actualTypeParameters.length];
@@ -1100,9 +1077,8 @@ final class TypeUtil {
             
         }
         
-        if (type instanceof TypeVariable<?>) {
-            
-            final TypeVariable<?> typeVariable = (TypeVariable<?>) type;
+        if (type instanceof TypeVariable<?> typeVariable) {
+
             final java.lang.reflect.Type[] bounds = typeVariable.getBounds();
             
             final Type<?> correspondingType = 

@@ -148,13 +148,9 @@ public final class InnerWildcardTypeDefVariable implements InnerTypeDefVariable 
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof InnerWildcardTypeDefVariable other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final InnerWildcardTypeDefVariable other = (InnerWildcardTypeDefVariable) obj;
         return this.stringRepresentation.equals(other.stringRepresentation);
     }
 

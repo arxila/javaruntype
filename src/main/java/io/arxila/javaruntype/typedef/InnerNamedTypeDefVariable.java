@@ -100,13 +100,9 @@ public final class InnerNamedTypeDefVariable implements InnerTypeDefVariable {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof InnerNamedTypeDefVariable other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final InnerNamedTypeDefVariable other = (InnerNamedTypeDefVariable) obj;
         return this.stringRepresentation.equals(other.stringRepresentation);
     }
 

@@ -19,11 +19,10 @@
  */
 package io.arxila.javaruntype.typedef;
 
+import io.arxila.javaruntype.util.Utils;
 import java.io.ObjectStreamException;
 import java.io.Serial;
 import java.io.Serializable;
-
-import io.arxila.javaruntype.util.Utils;
 
 /**
  * <p>
@@ -162,13 +161,9 @@ public final class TypeDef implements Serializable {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof TypeDef other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final TypeDef other = (TypeDef) obj;
         // Comparing name will be enough and quicker than other comparisons
         return (this.name.equals(other.name));
     }

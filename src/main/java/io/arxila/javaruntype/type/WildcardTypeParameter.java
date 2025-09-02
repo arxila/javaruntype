@@ -76,10 +76,7 @@ public final class WildcardTypeParameter extends TypeParameter<Object> {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
-            return false;
-        }
-        return (getClass() != obj.getClass());
+        return (obj instanceof WildcardTypeParameter);
     }
 
 
@@ -89,6 +86,7 @@ public final class WildcardTypeParameter extends TypeParameter<Object> {
     }
     
     
+    @Serial
     @SuppressWarnings("unused")
     private Object readResolve() throws ObjectStreamException {
         return UNKNOWN;

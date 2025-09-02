@@ -19,6 +19,10 @@
  */
 package io.arxila.javaruntype.type;
 
+import io.arxila.javaruntype.typedef.TypeDef;
+import io.arxila.javaruntype.typedef.TypeDefVariable;
+import io.arxila.javaruntype.typedef.TypeDefs;
+import io.arxila.javaruntype.util.Utils;
 import java.io.ObjectStreamException;
 import java.io.Serial;
 import java.io.Serializable;
@@ -29,11 +33,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-
-import io.arxila.javaruntype.typedef.TypeDef;
-import io.arxila.javaruntype.typedef.TypeDefVariable;
-import io.arxila.javaruntype.typedef.TypeDefs;
-import io.arxila.javaruntype.util.Utils;
 
 /**
  * <p>
@@ -408,13 +407,9 @@ public final class Type<T> implements Serializable {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof Type<?> other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Type<?> other = (Type<?>) obj;
         // Comparing name will be enough and quicker than other comparisons
         return (this.name.equals(other.name));
     }

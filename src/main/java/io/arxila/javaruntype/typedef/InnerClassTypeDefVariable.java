@@ -101,13 +101,9 @@ public final class InnerClassTypeDefVariable implements InnerTypeDefVariable {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof InnerClassTypeDefVariable other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final InnerClassTypeDefVariable other = (InnerClassTypeDefVariable) obj;
         return this.stringRepresentation.equals(other.stringRepresentation);
     }
 

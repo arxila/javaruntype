@@ -124,13 +124,9 @@ public final class InnerParameterizedTypeTypeDefVariable
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof InnerParameterizedTypeTypeDefVariable other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final InnerParameterizedTypeTypeDefVariable other = (InnerParameterizedTypeTypeDefVariable) obj;
         return this.stringRepresentation.equals(other.stringRepresentation);
     }
 

@@ -79,13 +79,9 @@ public final class StandardTypeParameter<T> extends TypeParameter<T> {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof StandardTypeParameter<?> other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final StandardTypeParameter<?> other = (StandardTypeParameter<?>) obj;
         return this.type.equals(other.type);
     }
 

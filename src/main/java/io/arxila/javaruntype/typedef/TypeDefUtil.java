@@ -80,9 +80,8 @@ final class TypeDefUtil {
     private static InnerTypeDefVariable getInnerTypeDefDeclaration(
             final Type typeDeclaration, final int arrayDimensions) {
 
-        if (typeDeclaration instanceof Class<?>) {
+        if (typeDeclaration instanceof Class<?> typeClass) {
 
-            final Class<?> typeClass = (Class<?>) typeDeclaration;
             if (typeClass.isArray()) {
                 return getInnerTypeDefDeclaration(
                         typeClass.getComponentType(),
@@ -90,10 +89,8 @@ final class TypeDefUtil {
             }
             return new InnerClassTypeDefVariable(typeClass, arrayDimensions);
 
-        } else if (typeDeclaration instanceof ParameterizedType) {
+        } else if (typeDeclaration instanceof ParameterizedType parameterizedType) {
 
-            final ParameterizedType parameterizedType = 
-                (ParameterizedType) typeDeclaration;
             final Class<?> typeClass = (Class<?>) parameterizedType.getRawType();
             
             final Type[] typeArguments = parameterizedType.getActualTypeArguments();
@@ -106,21 +103,20 @@ final class TypeDefUtil {
             return new InnerParameterizedTypeTypeDefVariable(
                     typeClass, innerVariables, arrayDimensions);
             
-        } else if (typeDeclaration instanceof TypeVariable<?>) {
+        } else if (typeDeclaration instanceof TypeVariable<?> typeVariable) {
 
             return new InnerNamedTypeDefVariable(
-                    ((TypeVariable<?>) typeDeclaration).getName(),
+                    typeVariable.getName(),
                     arrayDimensions);
             
-        } else if (typeDeclaration instanceof GenericArrayType) {
+        } else if (typeDeclaration instanceof GenericArrayType genericArrayType) {
             
             return getInnerTypeDefDeclaration(
-                    ((GenericArrayType) typeDeclaration).getGenericComponentType(), 
+                    genericArrayType.getGenericComponentType(),
                     (arrayDimensions + 1));
             
-        } else if (typeDeclaration instanceof WildcardType) {
+        } else if (typeDeclaration instanceof WildcardType wildcardType) {
 
-            final WildcardType wildcardType = (WildcardType) typeDeclaration;
             if (!Utils.isArrayEqual(OBJECT_BOUNDS, wildcardType.getUpperBounds())) {
                 
                 final InnerTypeDefVariable upperBound = 
@@ -143,8 +139,7 @@ final class TypeDefUtil {
             
         } else {
 
-            return new InnerClassTypeDefVariable(
-                    (Class<?>) typeDeclaration, arrayDimensions);
+            throw new IllegalArgumentException("Unknown type declaration: " + typeDeclaration);
             
         }
         

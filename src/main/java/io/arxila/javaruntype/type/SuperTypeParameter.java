@@ -93,13 +93,9 @@ public final class SuperTypeParameter<T> extends TypeParameter<T> {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
+        if (!(obj instanceof SuperTypeParameter<?> other)) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final SuperTypeParameter<?> other = (SuperTypeParameter<?>) obj;
         return this.stringRepresentation.equals(other.stringRepresentation);
     }
 
